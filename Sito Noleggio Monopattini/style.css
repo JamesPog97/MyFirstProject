@@ -1,0 +1,101 @@
+:root {
+  --green: rgb(0, 216, 0);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: #111 url('background.jpg') no-repeat fixed top 10% left 50%;
+  background-size: 90%;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 13px;
+}
+
+.container {
+  width: 70%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 25px auto;
+  padding: 80px;
+  border-radius: 10px;
+}
+
+header {
+  color: var(--green);
+  text-align: center;
+}
+
+header > img {
+  width: 20%;
+}
+
+header > h1 {
+  font-size: 24px;
+  margin: 3px 0;
+}
+
+nav {
+  background-color: var(--green);
+  padding: 8px;
+  text-align: center;
+}
+
+main > section {
+  margin: 20px 0;
+}
+
+section > h2:before {
+  content: "\25A0  ";
+}
+
+div.position::before {
+  content: "\21A6  ";
+}
+
+.battery {
+  border-radius: 6px;
+  height: 30px;
+}
+
+.battery.low {
+  width: 150px;
+  background-color: rgb(202, 74, 74);
+}
+
+.battery.medium {
+  width: 300px;
+  background-color: rgb(230, 167, 52);
+}
+
+.battery.high {
+  width: 500px;
+  background-color: rgb(47, 182, 47);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: top 50% left 65%;
+    font-size: 15px;
+  }
+  .container {
+    width: 95%;
+    padding: 50px;
+  }
+  header > img {
+    width: 80%;
+  }
+  .battery.low {
+    width: 30%;
+  }
+  .battery.medium {
+    width: 60%;
+  }
+  .battery.high {
+    width: 100%;
+  }
+}
